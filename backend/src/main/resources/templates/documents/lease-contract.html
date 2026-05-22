@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        @page { size: A4; margin: 24mm 18mm 22mm 18mm; }
+        body { font-family: "DejaVu Sans", Arial, sans-serif; color: #1f2937; font-size: 11.4px; line-height: 1.48; }
+        header { border-bottom: 2px solid #b08d2f; margin-bottom: 18px; padding-bottom: 8px; }
+        .brand { color: #0f2742; font-size: 18px; font-weight: 700; letter-spacing: 0; }
+        .subtitle { color: #475569; font-size: 10px; margin-top: 3px; }
+        h1 { color: #0f2742; font-size: 18px; text-align: center; margin: 18px 0 4px; }
+        h2 { color: #0f2742; font-size: 13px; margin: 16px 0 6px; border-bottom: 1px solid #d8c48b; padding-bottom: 3px; }
+        p { margin: 0 0 8px; text-align: justify; }
+        .intro { margin-top: 12px; }
+        .box { border: 1px solid #d7dee8; padding: 10px; margin: 10px 0; background: #f8fafc; }
+        .signature { margin-top: 22px; page-break-inside: avoid; }
+        .line { margin-top: 22px; border-top: 1px solid #111827; padding-top: 5px; }
+        .muted { color: #64748b; font-size: 10px; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand">Último Andar</div>
+    <div class="subtitle">Modelo-base para geração automatizada de documentos | Contrato de Locação de Imóvel</div>
+</header>
+
+<h1>CONTRATO DE LOCAÇÃO DE IMÓVEL</h1>
+<p class="intro">Pelo presente instrumento particular, as partes abaixo identificadas celebram contrato de locação de imóvel, nos termos da legislação brasileira aplicável, especialmente a Lei nº 8.245/1991, o Código Civil e a Lei nº 13.709/2018 - Lei Geral de Proteção de Dados Pessoais (LGPD), mediante as cláusulas e condições seguintes.</p>
+
+<h2>1. Das Partes</h2>
+<p><strong>LOCADOR(A):</strong> {{nome_locador}}, inscrito(a) no CPF/CNPJ sob nº {{cpf_cnpj_locador}}, com endereço em {{endereco_locador}}, doravante denominado(a) LOCADOR(A).</p>
+<p><strong>LOCATÁRIO(A):</strong> {{nome_locatario}}, inscrito(a) no CPF/CNPJ sob nº {{cpf_cnpj_locatario}}, com endereço em {{endereco_locatario}}, doravante denominado(a) LOCATÁRIO(A).</p>
+<p><strong>ADMINISTRADORA/INTERVENIENTE:</strong> Último Andar, inscrita no CNPJ sob nº {{cnpj_administradora}}, com endereço em {{endereco_administradora}}, quando aplicável, atuando na administração da locação, cobranças, comunicação entre as partes e guarda dos documentos contratuais.</p>
+
+<h2>2. Do Imóvel Locado</h2>
+<p>O LOCADOR dá em locação ao LOCATÁRIO o imóvel situado em {{endereco_imovel}}, com as características descritas no cadastro interno nº {{codigo_imovel}}, incluindo eventuais vagas, benfeitorias, equipamentos e acessórios constantes no laudo de vistoria e/ou no anexo de descrição do imóvel.</p>
+<p>O imóvel destina-se exclusivamente à finalidade {{finalidade_locacao}}, vedada alteração de uso sem autorização prévia e por escrito do LOCADOR ou da ADMINISTRADORA.</p>
+
+<h2>3. Do Prazo da Locação</h2>
+<p>A locação terá início em {{data_inicio}} e vigorará pelo prazo de {{prazo_contrato}}.</p>
+<p>Quando o prazo for determinado, o término será em {{data_termino}}. Na hipótese de prazo indeterminado ou prorrogação automática, as regras de rescisão e notificação seguirão a legislação aplicável e as condições pactuadas neste instrumento.</p>
+
+<h2>4. Do Aluguel, Encargos e Forma de Pagamento</h2>
+<p>O aluguel mensal será de {{valor_aluguel}}, vencível todo dia {{data_vencimento}} de cada mês, observado que o vencimento mensal deverá ocorrer até o dia 10 de cada mês, conforme regra operacional da ADMINISTRADORA.</p>
+<p>O pagamento será realizado por meio de {{forma_pagamento}}, em favor de {{favorecido_pagamento}}, ou por outro meio informado formalmente pela ADMINISTRADORA.</p>
+<p>Além do aluguel, serão de responsabilidade do LOCATÁRIO, quando aplicáveis e salvo disposição diversa: condomínio, IPTU, taxas ordinárias de uso, consumo de água, energia elétrica, gás, internet, multas por uso irregular e demais encargos diretamente vinculados à posse e utilização do imóvel.</p>
+<p>O atraso no pagamento sujeitará o LOCATÁRIO à multa moratória de {{multa_mora_percentual}}%, juros de {{juros_mora_percentual}}% ao mês, correção monetária e demais despesas de cobrança, observados os limites legais e contratuais.</p>
+
+<h2>5. Do Reajuste</h2>
+<p>O aluguel poderá ser reajustado a cada período de {{periodicidade_reajuste}}, pelo índice {{indice_reajuste}}, ou por outro índice legal que venha a substituí-lo, conforme previsto na legislação aplicável.</p>
+<p>Na impossibilidade de utilização do índice pactuado, as partes poderão adotar índice substitutivo idôneo ou formalizar ajuste por aditivo contratual.</p>
+
+<h2>6. Da Garantia Locatícia</h2>
+<p>A garantia da locação será {{tipo_garantia}}, conforme dados e documentos constantes no cadastro do contrato.</p>
+<p>Quando houver fiador, seguro-fiança, caução ou outra modalidade, as condições específicas constarão de anexo ou cláusula complementar, integrando este contrato para todos os fins.</p>
+
+<h2>7. Da Vistoria, Conservação e Devolução do Imóvel</h2>
+<p>O LOCATÁRIO declara receber o imóvel no estado descrito no laudo de vistoria inicial, obrigando-se a conservá-lo, utilizá-lo adequadamente e devolvê-lo ao final da locação no mesmo estado em que o recebeu, ressalvado o desgaste natural decorrente do uso regular.</p>
+<p>Benfeitorias, modificações, reformas, pinturas, instalações ou alterações estruturais dependerão de autorização prévia e por escrito do LOCADOR ou da ADMINISTRADORA.</p>
+<p>Ao término da locação, será realizada vistoria de saída, podendo ser apurados reparos, débitos, multas, encargos pendentes e eventuais indenizações.</p>
+
+<h2>8. Das Obrigações do Locador</h2>
+<p>Compete ao LOCADOR entregar o imóvel em condições de uso, responder por vícios ou defeitos anteriores à locação, fornecer documentos necessários à administração do contrato e respeitar a posse direta do LOCATÁRIO durante a vigência contratual.</p>
+<p>Compete ainda ao LOCADOR informar dados bancários corretos, alterações cadastrais e eventuais restrições ou ônus que possam afetar a locação.</p>
+
+<h2>9. Das Obrigações do Locatário</h2>
+<p>Compete ao LOCATÁRIO pagar pontualmente o aluguel e encargos, utilizar o imóvel conforme a finalidade contratada, cumprir normas condominiais, permitir vistorias previamente agendadas, comunicar danos ou ocorrências relevantes e não ceder, sublocar ou emprestar o imóvel sem autorização formal.</p>
+<p>O LOCATÁRIO responsabiliza-se por danos causados por si, seus familiares, empregados, visitantes, prepostos ou terceiros autorizados a ingressar no imóvel.</p>
+
+<h2>10. Da Rescisão e Multa Contratual</h2>
+<p>A rescisão antecipada observará a legislação aplicável, as hipóteses legais de denúncia ou resolução contratual e a multa pactuada de {{multa_rescisoria}}, proporcional quando aplicável.</p>
+<p>Constituem hipóteses de rescisão, entre outras: inadimplemento, infração contratual, uso irregular do imóvel, sublocação não autorizada, descumprimento de normas legais ou condominiais e demais situações previstas em lei.</p>
+
+<h2>11. Da Proteção de Dados Pessoais - LGPD</h2>
+<p>As partes autorizam o tratamento dos dados pessoais estritamente necessários para cadastro, análise, celebração, execução, gestão, cobrança, arquivamento e cumprimento de obrigações legais ou regulatórias relacionadas à locação.</p>
+<p>A ADMINISTRADORA compromete-se a adotar medidas técnicas e administrativas razoáveis para proteger dados pessoais contra acessos não autorizados, perda, alteração, comunicação indevida ou tratamento inadequado.</p>
+<p>Os dados poderão ser compartilhados com bancos, seguradoras, cartórios, plataformas de assinatura eletrônica, órgãos públicos, prestadores de cobrança, assessorias jurídicas e demais terceiros necessários à execução do contrato, observada a finalidade legítima e a legislação aplicável.</p>
+<p>O titular poderá solicitar informações, correções ou providências relativas a seus dados pessoais pelos canais oficiais da ADMINISTRADORA: {{email_privacidade}}.</p>
+
+<h2>12. Das Comunicações</h2>
+<p>As comunicações entre as partes poderão ocorrer por e-mail, aplicativo de mensagens, telefone, correspondência física, plataforma da ADMINISTRADORA ou outro meio informado no cadastro, considerando-se válidas quando enviadas aos contatos declarados: {{email_locador}}, {{email_locatario}} e {{telefone_locatario}}.</p>
+<p>As partes comprometem-se a manter seus dados cadastrais atualizados.</p>
+
+<h2>13. Disposições Gerais</h2>
+<p>Este contrato obriga as partes, seus herdeiros e sucessores, não podendo ser cedido sem autorização por escrito, salvo hipóteses previstas em lei.</p>
+<p>A eventual tolerância de uma parte quanto ao descumprimento de obrigação pela outra não constituirá renúncia, novação ou alteração contratual.</p>
+<p>Integram este contrato os anexos, laudos, fotos, comprovantes, garantias, aditivos e documentos digitais vinculados ao registro nº {{numero_contrato}}.</p>
+<div class="box"><strong>Observações adicionais:</strong><br/>{{observacoes_adicionais}}<br/><br/><strong>Cláusulas extras:</strong><br/>{{clausulas_extras}}</div>
+
+<h2>14. Do Foro</h2>
+<p>Fica eleito o foro da comarca de {{foro}}, com renúncia a qualquer outro, por mais privilegiado que seja, para dirimir dúvidas oriundas deste contrato, salvo disposição legal específica de competência.</p>
+<p>{{cidade}}, {{data_geracao}}.</p>
+
+<section class="signature">
+    <div class="line">LOCADOR(A): {{nome_locador}}</div>
+    <div class="line">LOCATÁRIO(A): {{nome_locatario}}</div>
+    <div class="line">ADMINISTRADORA/INTERVENIENTE: Último Andar</div>
+    <h2>Testemunhas</h2>
+    <div class="line">1. Nome: {{nome_testemunha_1}} | CPF: {{cpf_testemunha_1}}</div>
+    <div class="line">2. Nome: {{nome_testemunha_2}} | CPF: {{cpf_testemunha_2}}</div>
+</section>
+<p class="muted">Observação: recomenda-se reconhecimento de firmas ou assinatura eletrônica com trilha de auditoria, conforme política interna da administradora.</p>
+</body>
+</html>

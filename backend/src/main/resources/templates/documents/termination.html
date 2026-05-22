@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        @page { size: A4; margin: 24mm 18mm 22mm 18mm; }
+        body { font-family: "DejaVu Sans", Arial, sans-serif; color: #1f2937; font-size: 11.4px; line-height: 1.5; }
+        header { border-bottom: 2px solid #b08d2f; margin-bottom: 18px; padding-bottom: 8px; }
+        .brand { color: #0f2742; font-size: 18px; font-weight: 700; }
+        .subtitle { color: #475569; font-size: 10px; margin-top: 3px; }
+        h1 { color: #0f2742; font-size: 18px; text-align: center; margin: 18px 0 4px; }
+        h2 { color: #0f2742; font-size: 13px; margin: 16px 0 6px; border-bottom: 1px solid #d8c48b; padding-bottom: 3px; }
+        p { margin: 0 0 8px; text-align: justify; }
+        .signature { margin-top: 22px; page-break-inside: avoid; }
+        .line { margin-top: 22px; border-top: 1px solid #111827; padding-top: 5px; }
+        .box { border: 1px solid #d7dee8; padding: 10px; margin: 10px 0; background: #f8fafc; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand">Último Andar</div>
+    <div class="subtitle">Modelo-base para geração automatizada de documentos | Distrato / Termo de Encerramento</div>
+</header>
+
+<h1>DISTRATO / TERMO DE ENCERRAMENTO DE CONTRATO DE LOCAÇÃO</h1>
+<p>Pelo presente instrumento particular, as partes abaixo qualificadas resolvem formalizar o encerramento do contrato de locação de imóvel nº {{numero_contrato}}, observadas as condições abaixo e a legislação brasileira aplicável.</p>
+
+<h2>1. Das Partes e do Contrato Encerrado</h2>
+<p><strong>LOCADOR(A):</strong> {{nome_locador}}, CPF/CNPJ nº {{cpf_cnpj_locador}}, endereço {{endereco_locador}}.</p>
+<p><strong>LOCATÁRIO(A):</strong> {{nome_locatario}}, CPF/CNPJ nº {{cpf_cnpj_locatario}}, endereço {{endereco_locatario}}.</p>
+<p><strong>IMÓVEL:</strong> {{endereco_imovel}}, cadastro interno nº {{codigo_imovel}}.</p>
+<p><strong>CONTRATO:</strong> nº {{numero_contrato}}, firmado em {{data_contrato_original}}, com início em {{data_inicio}} e prazo {{prazo_contrato}}.</p>
+
+<h2>2. Do Encerramento da Locação</h2>
+<p>As partes ajustam que a locação será encerrada em {{data_encerramento}}, data em que o LOCATÁRIO deverá restituir a posse do imóvel, entregar chaves, controles, tags e demais itens recebidos, salvo disposição diversa registrada neste termo.</p>
+<p>O motivo do encerramento é: {{motivo_encerramento}}.</p>
+<p>A entrega das chaves será realizada em {{local_entrega_chaves}}, perante {{responsavel_recebimento_chaves}}.</p>
+
+<h2>3. Da Vistoria de Saída e Estado do Imóvel</h2>
+<p>A vistoria de saída será realizada em {{data_vistoria_saida}}, podendo apurar reparos, pendências, limpeza, pintura, danos, ausência de acessórios, débitos de consumo ou encargos.</p>
+<p>Se houver pendências, o LOCATÁRIO compromete-se a saná-las ou indenizar o LOCADOR conforme apuração documentada: {{pendencias_vistoria}}.</p>
+<p>A aceitação das chaves não impede a cobrança de valores posteriormente identificados, desde que comprovadamente relacionados ao período de ocupação ou ao descumprimento contratual.</p>
+
+<h2>4. Dos Valores, Débitos e Quitação</h2>
+<p>Na data de encerramento, as partes registram a existência de débitos pendentes: {{existe_debitos_pendentes}}.</p>
+<p>Valores apurados: aluguel proporcional {{valor_aluguel_proporcional}}; multa rescisória {{valor_multa_rescisoria}}; encargos {{valor_encargos_pendentes}}; reparos {{valor_reparos}}; outros valores {{outros_valores}}; total {{valor_total_encerramento}}.</p>
+<p>A forma e prazo de pagamento serão: {{forma_pagamento_encerramento}}.</p>
+<p>Após a quitação integral dos valores acima, as partes darão entre si plena, geral e irrevogável quitação exclusivamente quanto às obrigações expressamente abrangidas neste termo, ressalvadas pendências ocultas, débitos supervenientes comprovados, obrigações fiscais/condominiais ainda não apuradas e direitos indisponíveis.</p>
+
+<h2>5. Da Devolução de Garantias</h2>
+<p>A garantia locatícia {{tipo_garantia}} será liberada, compensada ou executada conforme a apuração final de débitos e as regras do contrato original.</p>
+<p>Quando houver caução, eventual saldo a restituir será pago ao LOCATÁRIO em {{prazo_restituicao_caucao}}, por meio de {{dados_pagamento_restituicao}}, após abatimento de valores devidos, quando aplicável.</p>
+
+<h2>6. Do Encerramento Administrativo</h2>
+<p>A ADMINISTRADORA fica autorizada a atualizar o status do contrato para encerrado, arquivar documentos, registrar o histórico da locação, emitir recibos, comprovantes e relatórios internos necessários.</p>
+<p>As partes comprometem-se a fornecer documentos complementares que sejam razoavelmente necessários para fechamento de contas, baixa de cadastros e comprovação de pagamentos.</p>
+<div class="box"><strong>Declarações adicionais:</strong><br/>{{declaracoes_adicionais}}</div>
+
+<h2>7. Proteção de Dados Pessoais - LGPD</h2>
+<p>Os dados pessoais tratados neste encerramento serão utilizados para execução do distrato, registro histórico, cobrança, prestação de contas, cumprimento de obrigações legais, exercício regular de direitos e arquivamento contratual.</p>
+<p>A retenção de documentos ocorrerá pelo prazo necessário ao cumprimento das finalidades legais, contratuais e de defesa de direitos, observadas medidas de segurança e acesso restrito.</p>
+
+<h2>8. Ratificação e Foro</h2>
+<p>Permanecem válidas as disposições do contrato original que, por sua natureza, sobrevivam ao encerramento, especialmente confidencialidade, proteção de dados, responsabilidade por débitos, reparos, multas e foro.</p>
+<p>Fica eleito o foro de {{foro}} para dirimir dúvidas decorrentes deste termo, salvo disposição legal aplicável.</p>
+<p>{{cidade}}, {{data_geracao}}.</p>
+
+<section class="signature">
+    <div class="line">LOCADOR(A): {{nome_locador}}</div>
+    <div class="line">LOCATÁRIO(A): {{nome_locatario}}</div>
+    <div class="line">ADMINISTRADORA/INTERVENIENTE: Último Andar</div>
+    <h2>Testemunhas</h2>
+    <div class="line">1. Nome: {{nome_testemunha_1}} | CPF: {{cpf_testemunha_1}}</div>
+    <div class="line">2. Nome: {{nome_testemunha_2}} | CPF: {{cpf_testemunha_2}}</div>
+</section>
+</body>
+</html>

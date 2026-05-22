@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <style>
+        @page { size: A4; margin: 24mm 18mm 22mm 18mm; }
+        body { font-family: "DejaVu Sans", Arial, sans-serif; color: #1f2937; font-size: 11.4px; line-height: 1.5; }
+        header { border-bottom: 2px solid #b08d2f; margin-bottom: 18px; padding-bottom: 8px; }
+        .brand { color: #0f2742; font-size: 18px; font-weight: 700; }
+        .subtitle { color: #475569; font-size: 10px; margin-top: 3px; }
+        h1 { color: #0f2742; font-size: 18px; text-align: center; margin: 18px 0 4px; }
+        h2 { color: #0f2742; font-size: 13px; margin: 16px 0 6px; border-bottom: 1px solid #d8c48b; padding-bottom: 3px; }
+        p { margin: 0 0 8px; text-align: justify; }
+        .signature { margin-top: 22px; page-break-inside: avoid; }
+        .line { margin-top: 22px; border-top: 1px solid #111827; padding-top: 5px; }
+        .box { border: 1px solid #d7dee8; padding: 10px; margin: 10px 0; background: #f8fafc; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="brand">Último Andar</div>
+    <div class="subtitle">Modelo-base para geração automatizada de documentos | Aditivo Contratual</div>
+</header>
+
+<h1>ADITIVO AO CONTRATO DE LOCAÇÃO DE IMÓVEL</h1>
+<p>Pelo presente instrumento particular, as partes abaixo qualificadas resolvem aditar o contrato de locação de imóvel nº {{numero_contrato}}, mantendo-se válidas todas as cláusulas não alteradas expressamente por este termo.</p>
+
+<h2>1. Das Partes e do Contrato Original</h2>
+<p><strong>LOCADOR(A):</strong> {{nome_locador}}, CPF/CNPJ nº {{cpf_cnpj_locador}}, endereço {{endereco_locador}}.</p>
+<p><strong>LOCATÁRIO(A):</strong> {{nome_locatario}}, CPF/CNPJ nº {{cpf_cnpj_locatario}}, endereço {{endereco_locatario}}.</p>
+<p><strong>IMÓVEL:</strong> {{endereco_imovel}}, cadastro interno nº {{codigo_imovel}}.</p>
+<p><strong>CONTRATO ORIGINAL:</strong> nº {{numero_contrato}}, firmado em {{data_contrato_original}}, com início em {{data_inicio}} e término em {{data_termino}}, quando aplicável.</p>
+
+<h2>2. Do Objeto do Aditivo</h2>
+<p>O presente aditivo tem por objeto {{tipo_aditivo}}, conforme descrição: {{descricao_aditivo}}.</p>
+<p>A alteração ora pactuada passa a produzir efeitos a partir de {{data_inicio_aditivo}}, salvo disposição expressa diversa neste instrumento.</p>
+
+<h2>3. Da Alteração de Valor, se Aplicável</h2>
+<p>Quando o aditivo tratar de alteração do aluguel, o novo valor mensal será de {{novo_valor_aluguel}}, com vencimento em {{data_vencimento}}, observado o limite operacional de vencimento até o dia 10 de cada mês.</p>
+<p>Eventuais encargos acessórios, reajustes, forma de pagamento, multa, juros e demais condições permanecem conforme contrato original, salvo se expressamente modificados neste aditivo.</p>
+
+<h2>4. Da Prorrogação de Prazo, se Aplicável</h2>
+<p>Quando o aditivo tratar de prorrogação, o prazo contratual passa a ser {{novo_prazo_contrato}}, com início em {{data_inicio_aditivo}} e término em {{nova_data_termino}}, ou por prazo indeterminado, conforme opção registrada no sistema.</p>
+<p>Permanecem aplicáveis as condições de rescisão, multa, denúncia, vistoria e devolução previstas no contrato original e na legislação aplicável.</p>
+
+<h2>5. Da Alteração de Partes, Garantias ou Cláusulas, se Aplicável</h2>
+<p>Quando houver substituição, inclusão ou exclusão de parte, fiador, garantia ou cláusula, ficam registradas as seguintes alterações: {{alteracoes_partes_garantias_clausulas}}.</p>
+<p>As partes declaram que as informações e documentos fornecidos são verdadeiros, atualizados e suficientes para a formalização do presente aditivo.</p>
+<div class="box"><strong>Observações:</strong><br/>{{observacoes_aditivo}}</div>
+
+<h2>6. Ratificação das Demais Cláusulas</h2>
+<p>Permanecem inalteradas e plenamente válidas todas as demais cláusulas e condições do contrato original que não conflitarem com o presente aditivo.</p>
+<p>Em caso de conflito entre este aditivo e o contrato original, prevalecerá o disposto neste aditivo exclusivamente quanto à matéria aqui alterada.</p>
+
+<h2>7. Proteção de Dados Pessoais - LGPD</h2>
+<p>Os dados pessoais tratados para formalização deste aditivo serão utilizados para identificação das partes, execução contratual, gestão documental, cobrança, cumprimento de obrigações legais e defesa de direitos.</p>
+<p>A ADMINISTRADORA adotará medidas razoáveis de segurança e poderá compartilhar dados com prestadores necessários à execução do contrato, como plataformas de assinatura, cartórios, seguradoras, bancos e assessorias jurídicas, observada a LGPD.</p>
+
+<h2>8. Foro</h2>
+<p>Fica mantido o foro de {{foro}}, salvo disposição diversa no contrato original ou determinação legal aplicável.</p>
+<p>{{cidade}}, {{data_geracao}}.</p>
+
+<section class="signature">
+    <div class="line">LOCADOR(A): {{nome_locador}}</div>
+    <div class="line">LOCATÁRIO(A): {{nome_locatario}}</div>
+    <div class="line">ADMINISTRADORA/INTERVENIENTE: Último Andar</div>
+    <h2>Testemunhas</h2>
+    <div class="line">1. Nome: {{nome_testemunha_1}} | CPF: {{cpf_testemunha_1}}</div>
+    <div class="line">2. Nome: {{nome_testemunha_2}} | CPF: {{cpf_testemunha_2}}</div>
+</section>
+</body>
+</html>
